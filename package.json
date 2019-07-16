@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^3.4.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}

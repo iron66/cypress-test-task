@@ -12,7 +12,7 @@
 
 *Use stubs to avoid changing profile on the actual live forum*
 
-	Open discuss.flarum.org as a logged*in user (using relevant Cypress functions)
+	Open discuss.flarum.org as a logged in user (using relevant Cypress functions)
 	Open user profile
 	Change information about yourself. Verify new information is actually present in the relevant request.
 	Open forum home page

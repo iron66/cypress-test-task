@@ -1,0 +1,13 @@
+{
+  "userCredentials": {
+    "login": "uiop",
+    "password": "uiopuiop"
+  },
+  "firstTest": {
+    "bioText": "Test"
+  },
+  "secondTest": {
+    "discussionTitle": "Test",
+    "replyText": "Test Information"
+  }
+}
