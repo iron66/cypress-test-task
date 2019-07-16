@@ -2,21 +2,25 @@ import { firstTest } from "../../requirements.json";
 describe("discuss.flarum test", async () => {
   it('Visits the site, fill bio and check submit request"', async () => {
     cy.server();
-    cy.fixture('user').then((user)  => {
-      user.data.attributes.bio = firstTest.bioText
-      cy.route("POST", `/api/users/*`, user).as("postBio");
-    })
+    cy.stubPostBio();
+    
 
     cy.openHomePage("https://discuss.flarum.org");
     cy.login();
     cy.openProfilePage();
-    cy.fillBio(firstTest.bioText)
+    cy.fillBio(firstTest.bioText);
 
     cy.wait("@postBio").then(xhr => {
-      expect(xhr.request.body.data.attributes).to.have.property("bio", firstTest.bioText);
+      expect(xhr.request.body.data.attributes).to.have.property(
+        "bio",
+        firstTest.bioText
+      );
     });
-    cy.checkPostedBio(firstTest.bioText)
+
+    cy.stubGetBio();
+
     cy.openHomePage();
     cy.openProfilePage();
+    cy.checkPostedBio(firstTest.bioText);
   });
 });
