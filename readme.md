@@ -17,6 +17,7 @@
 	Change information about yourself. Verify new information is actually present in the relevant request.
 	Open forum home page
 	Open user profile
+	Verify new information is displayed
 
 
 **Test 2 Post a reply**

@@ -36,7 +36,7 @@
       },
       "newFlagCount": 0,
       "canSuspend": false,
-      "bio": "Mocked Value",
+      "bio": "",
       "canSpamblock": false
     },
     "relationships": { "groups": { "data": [] } }
